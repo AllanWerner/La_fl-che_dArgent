@@ -220,7 +220,7 @@ class User{
     return $bdd->exec("DELETE FROM users"); // Supprime toutes les données de la table users 
   }
 
-  public static function deleteUser(int $id, string $email){
+  public static function deleteUser(int $id){
     $bdd = BDD::connect(); // Obtenir la connexion
     return $bdd->exec("DELETE FROM users WHERE id=$id AND email=$email"); // Supprime un utilisateur de la table users 
   }
