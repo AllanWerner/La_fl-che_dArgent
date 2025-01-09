@@ -167,6 +167,31 @@ class User{
     }
   }
 
+  public static function getById(int $id){
+    try{
+      $bdd = BDD::connect(); // Obtenir la connexion
+      $req = $bdd->prepare("SELECT * FROM users WHERE id = :id");
+      $req->bindValue(":id", $id, \PDO::PARAM_INT);
+
+        if(!$req->execute()){
+            Utils::launchException("Une erreur s'est produite lors de la récupération de l'user");
+        }
+
+        $user = $req->fetch(\PDO::FETCH_OBJ);
+
+        if(!$user){
+            Utils::launchException("le user ciblé n'a pas été trouvé");
+        }
+
+        self::setAllParams($user);
+
+        return $user;
+
+    }catch(\Exception $e){
+        Utils::readException($e);
+    }
+  }
+
   // Mettre à jour un user
   public static function update(int $id, string $email, string $passwd, string $name, string $address, int $phone_num) {
     try {

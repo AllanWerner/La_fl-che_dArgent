@@ -8,7 +8,7 @@
 </head>
 <body>
    <h1><?= $headTitle ?? "Blog Voyage" ?></h1>
-   
+
     <main class="main-content">
         <?= $mainContent ?? "Erreur 404" ?>
     </main>

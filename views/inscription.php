@@ -6,7 +6,7 @@ ob_start();
 ?>
 
 <section class="main-sections">
-    <h1 class="main-articles-title">
+    <h1 class="main-form-title">
         <?= $headTitle ?>
     </h1>
 
@@ -18,9 +18,9 @@ ob_start();
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required />
         <label for="passwd">Mot de passe</label>
-        <input type="passwd" id="passwd" name="passwd" required />
+        <input type="password" id="passwd" name="passwd" required />
         <label for="phone_num">Numéro de téléphone</label>
-        <input type="phone_num" id="phone_num" name="phone_num" required />
+        <input type="number" id="phone_num" name="phone_num" required />
 
         <button type="submit" class="cta-btns">Envoyer</button>
         
