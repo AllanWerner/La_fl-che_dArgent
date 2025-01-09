@@ -1,0 +1,2 @@
+CREATE TABLE `fleche_dargent`.`users` (`ID` INT NOT NULL AUTO_INCREMENT , `email` VARCHAR(255) NOT NULL , `passwd` VARCHAR(255) NOT NULL , `name` VARCHAR(255) NOT NULL , `address` VARCHAR(255) NOT NULL , `phone_num` INT NOT NULL , `created_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`ID`)) ENGINE = InnoDB;
+/* Créarion de la table users*/
