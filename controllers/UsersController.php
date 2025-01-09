@@ -114,7 +114,7 @@ class UsersController{
             exit;
         }
 
-        User::deleteUser($id);
+        User::deleteUser($id,);
 
         // header("Location:/Users");  redirige sur le dashboard Admin
         exit;
