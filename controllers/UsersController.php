@@ -85,7 +85,7 @@ class UsersController{
         
         // var_dump($_POST);
 
-        if(is_null($id) || is_null($email) || is_null($passwd) || is_null($name) || is_null($address) ||  is_null($phone_num) || is_null($created_date)){
+        if(is_null($id) || is_null($email) || is_null($passwd) || is_null($name) || is_null($address) ||  is_null($phone_num)){
             ErrorsController::launchError(404);
             exit;
         }
@@ -97,7 +97,6 @@ class UsersController{
             passwd: $passwd,
             address: $address,
             phone_num: $phone_num,
-            created_date: $created_date
         );
 
         // header("Location:/Users"); redirige sur la page de session
