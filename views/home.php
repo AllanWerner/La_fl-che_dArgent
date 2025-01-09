@@ -1,5 +1,9 @@
 <?php
 
+$stylesheetv = "/sources/css/home.css?v=";
+$stylesheet = "/sources/css/home.css";
+
+
 ob_start();
 ?>
 

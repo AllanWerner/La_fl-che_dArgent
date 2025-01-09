@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/frontend/css/swiper-bundle.min.css" />
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="<?= $stylesheetv . filemtime(ROOT . $stylesheet) ?>">
     <title>La Flèche d'Argent</title>
 </head>
 
@@ -70,7 +70,7 @@
         </nav>
     </header>
     <main class="">
-        <?= $maincontent ?? "Erreur 404" ?>
+        <?= $mainContent ?? "Erreur 404" ?>
     </main>
 
     <footer>
