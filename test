@@ -1,0 +1,1 @@
+ <!--<script src="<?= "/sources/js/burger.js?v=" . filemtime(ROOT."/sources/js/burger.js") ?>"></script>-->

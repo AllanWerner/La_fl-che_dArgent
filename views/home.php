@@ -7,8 +7,7 @@ $stylesheet = "/sources/css/home.css";
 ob_start();
 ?>
 
-<!-- Partie top section avec image  -->
-    
+<!-- Partie top section avec image  -->    
     <div class="top-section">
         <div class="content">
             <h1>Bienvenue à La Flèche d'Argent</h1>
