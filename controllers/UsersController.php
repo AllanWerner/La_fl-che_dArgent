@@ -44,6 +44,8 @@ class UsersController{
     }
 
     public static function addUser(){
+
+        var_dump($_POST);
       
         $email = isset($_POST["email"]) && !empty($_POST["email"]) ?  $_POST["email"] : null;      
         $passwd= isset($_POST["passwd"]) && !empty($_POST["passwd"]) ?  $_POST["passwd"] : null;      
@@ -65,7 +67,7 @@ class UsersController{
             phone_num: $phone_num,
         );
 
-        // header("Location:/Users"); redirige sur la page de session
+        header("Location:/Users"); //redirige sur la page de session
         exit;
 
         // require_once ROOT."/views/add_User.php";

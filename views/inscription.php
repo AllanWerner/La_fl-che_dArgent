@@ -219,16 +219,6 @@ ob_start();
  
             <!-- Dropdown menu for account type -->
  
-            <div class="input-box">
- 
-                <select class="input-field" id="account-type" name="account-type">
- 
-                    <option value="User">Utilisateur</option>
- 
-                </select>
- 
-            </div>
- 
             <div class="g-recaptcha" data-sitekey="6LfOg5gpAAAAAOuyBgzvJw4SxxEtwqOK0jhF0DJ5"></div>
  
             <div id =  "captchaError"></div>

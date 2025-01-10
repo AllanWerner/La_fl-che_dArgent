@@ -12,12 +12,10 @@ use Models\User;
 use Models\Router;
 use Controllers\ErrorsController;
 use Controllers\MainController;
+use Controllers\UsersController;
 
-$uri = $_SERVER["REQUEST_URI"];
- 
+$uri = $_SERVER["REQUEST_URI"]; 
 $router = new Router();
-
-$router->get("/", MainController::index());
 
 // echo "YOUPI !!!!!!";
 
@@ -50,3 +48,37 @@ $router->get("/", MainController::index());
 // } else {
 //     echo "Failed to create the User !";
 // }
+
+
+$idParam = (int) preg_replace("/[\D]+/", "",$uri);
+
+switch(true){
+  case($uri === "/"):
+    $router->get("/", MainController::index());
+  break;
+
+  case($uri === "/connexion"):
+    $router->get("/", MainController::login());
+  break;
+  
+    case($uri === "/deconnexion"):
+        $router->get("/deconnexion", MainController::logout());
+    break;
+
+  case($uri === "/inscription"):
+    $router->post("/inscription", UsersController::addUser());
+  break;
+
+  case($idParam && str_contains($uri, "/profil")):
+    $router->get("/profil/$idParam", UsersController::profil());
+  break;
+  
+
+  
+  default:
+    ErrorsController::launchError(404);
+    break;
+}
+
+$router->run();
+?>
